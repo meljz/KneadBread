@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    height: auto;
+    background: #fff8f0;
+    z-index: 1000;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    outline: 2px solid red;
+}
+nav ul li {
+    outline: 2px solid blue;
+    margin: 0 20px;
+    padding: 10px 0;
+    height: 50px;
+}
+
+nav ul li a {
+    outline: 2px solid green;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 5px;
+    color: rgb(0, 0, 0);
+}
+
+/*
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.section_container{
+    width: 100%;
+    max-height: 100vh;
+    max-width: 1300px;
+    margin: 0 auto;
+    outline: 2px solid rgb(100, 8, 8);
+}
+
+/*Hero Section*/
+#Hero {
+    background-color: aquamarine;
+    height: 85vh;
+    outline: 2px solid black;
+}
+.Hero_wrapper {
+ position: relative;
+ width: 100%;
+ height: 80vh;
+ overflow: hidden;
+ outline: 2px solid orange;
+
+}
+
+.hero_bread {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    outline: 2px solid salmon;
+}
+
+.Hero_box{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 80%;
+    height: 200px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    outline: 2px solid rgb(255, 255, 255);
+}
+.Hero_text {
+    width: 75%;
+    height: auto;
+    outline: 2px solid rgb(0, 42, 255);
+}
+.Hero_imagebox {
+    outline: 2px solid red;
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero_image1{
+    height: 400px;
+    width: 300px;
+    border: 2px solid whitesmoke;
+
+}
+
+
+/*global for section*/
+.section_container{
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid red;
+}
+
+/*About Section*/
+#About {
+    height: 100vh;
+    background-color: antiquewhite;
+    
+}
+
+/*Products Section*/
+#Products {
+    height: 100vh;
+    background-color: rgb(220, 143, 41);
+}
+/*Recipe Section*/
+#Recipe {
+    height: 100vh;
+    background-color: rgb(127, 79, 16);
+}
+/*Contact Section*/
+#Contact {
+    height: 100vh;
+    background-color: rgb(197, 164, 119);
+}
