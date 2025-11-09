@@ -63,8 +63,8 @@ section {
 
 /*Hero Section*/
 #Hero {
-    background-color: aquamarine;
-    height: 85vh;
+    /*background-color: aquamarine;*/
+    height: 80vh;
     outline: 2px solid black;
 }
 .Hero_wrapper {
@@ -77,10 +77,14 @@ section {
 }
 
 .hero_bread {
+    position: absolute;
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
+    object-fit: cover;
+    z-index: 1; /* Push it behind everything */
+    opacity: 0.9; /* Optional: dim the image for contrast */
     outline: 2px solid salmon;
 }
 
@@ -89,32 +93,53 @@ section {
     flex-direction: row;
     position: absolute;
     width: 80%;
-    height: 200px;
+    height: 300px;
+    gap: 20px;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
-    outline: 2px solid rgb(255, 255, 255);
+    z-index: 2;
+    /*outline: 2px solid rgb(255, 255, 255);*/
 }
 .Hero_text {
-    width: 75%;
+    width: 60%;
     height: auto;
-    outline: 2px solid rgb(0, 42, 255);
+    /*outline: 2px solid rgb(0, 42, 255);*/
+}
+.Hero_text h1 {
+    font-size: 5em;
+    color: #faf7f3;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+}
+
+.Hero_text p {
+    font-size: 1.8em;
+    color: #f0eae7;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 .Hero_imagebox {
     outline: 2px solid red;
-    width: 25%;
-    height: auto;
+    width: 40%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
 .hero_image1{
-    height: 400px;
-    width: 300px;
-    border: 2px solid whitesmoke;
-
+ 
+  
+    height: 1000px;
+    width: 100%;
+  max-width: 100%;
+  border: 4px solid whitesmoke;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* adds depth */
+  transform: scale(1.05); /* slight zoom */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 20px;
 }
 
 
