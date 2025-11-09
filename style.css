@@ -175,7 +175,7 @@ section {
 
 .Products_text {
     font-size: 2em;
-    color:##707070;
+    color:#707070;
     outline: 2px solid green;
 }
 .Products_carousel {
@@ -310,10 +310,12 @@ section {
 
 /*Recipe Section*/
 #Recipe {
-    height: 70vh;
+    min-height: 70vh;
     width: auto;
-    margin: 0 200px;
+    margin: 0 auto;
     background-color: rgba(245, 222, 179, 0.127);
+    padding: 20px 50px;
+
 }
 #Recipe h1{
     text-align: center;
@@ -321,10 +323,12 @@ section {
 }
 .Recipe_container {
   display: flex;
-  width: 100%;
+  width: 70%;
   height: auto;
+  margin: 0 auto;
   justify-content: space-between; 
   align-items: center;
+  justify-content: center;
   gap: 20px; 
 }
 
@@ -337,7 +341,7 @@ section {
   height: auto;
 }
 .Recipe_fleximage {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 .Recipe_flextext {
@@ -358,6 +362,7 @@ section {
     padding: 5px 10px;
     margin: 0 10px;
 }
+/*
 .Recipe_button {
     width: 100px;
     height: 40px;
@@ -369,9 +374,161 @@ section {
 }
 .Recipe_button p {
     text-align: center;
+}*/
+/*Story Section*/
+#Story {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: rgba(245, 222, 179, 0.236);
+  padding: 10px 60px;
+  outline: 2px solid rgb(84, 208, 246);
+
 }
+
+.Story_container{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;       /* ✅ Center children horizontally */
+  text-align: center;
+  width: 100%;
+  max-width: 1250px;         /* ✅ Optional: control width */
+  margin: 0 auto;            /* ✅ Center container itself */
+  height: auto;
+  outline: 2px solid rgb(246, 84, 84);
+
+
+}
+.Story_text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    outline: 2px solid white;
+    justify-content: center;
+    text-align: left;
+
+    
+}
+.Story_text h1 {
+    font-size: 3em;
+    color: #050505;
+    padding: 20px;
+    text-align: center;
+}
+.Story_text p{
+    font-size: 1.2em;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.Story_image {
+    width: 80%;
+    height: auto;
+}
+
+.Story_image img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
 /*Contact Section*/
+
 #Contact {
-    height: 100vh;
-    background-color: rgb(197, 164, 119);
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between; /* Push left and right apart */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  min-height: 20vh;
+  background-color: rgba(245, 222, 179, 0.236);
+}
+.Contact_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /*overflow: hidden;*/
+}
+
+.Contact_background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  clip-path: ellipse(95% 100% at 10% 100%);
+}
+.Contact_container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    outline: 2px solid rgb(18, 70, 239);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 100px;
+}
+
+.Contact_left {
+  flex: 1;
+  min-width: 250px;
+  outline: 2px solid red;
+  text-align: left;
+}
+.Contact_left h1 {
+    color:#ffffff;
+    font-size: 2em;
+    text-decoration: none;
+}
+.Contact_left p {
+    color:#ffffff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.Contact_right {
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+  gap: 40px;
+  min-width: 300px;
+  outline: 2px solid red;
+  text-align: left;
+
+}
+
+.Contact_column {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+    line-height: 40px;
+}
+.Contact_column h1 {
+    color:#ffffff;
+    font-size: 2em;
+  text-decoration: none;
+}
+.Contact_column a {
+    color:#ffffff;
+    font-size: 1.2em;
+  text-decoration: none;
+}
+
+.fi {
+  font-size: 30px;
+  color:#ffffff;    
+  transition: transform 0.3s ease;
+
+}
+
+.fi:hover {
+  transform: scale(1.2);
 }
