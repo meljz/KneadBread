@@ -1,3 +1,25 @@
+// Start hero section: For the hero section
+const hero_elements = document.querySelectorAll (".hero_image1, .Hero_text, .Products_text, .About_image, .Recipe_flexitem, .Story_image img");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add("show");
+      
+    }else{
+      entry.target.classList.remove("show");
+    } 
+  });
+}, {
+  threshold: 0.1,
+});
+hero_elements.forEach(item => observer.observe(item));
+
+
+// End hero section: For the hero section
+
+
+
+
 const track = document.querySelector('.Products_track');
 const dots = document.querySelectorAll('.dot');
 const itemWidth = 320; // width of each item + gap

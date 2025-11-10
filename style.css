@@ -8,8 +8,12 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-variation-settings: "opsz" 12;
+    font-style: normal;
     line-height: 1.6;
+
 }
 
 nav {
@@ -66,8 +70,8 @@ section {
 
 /*Hero Section*/
 #Hero {
-    /*background-color: aquamarine;*/
-    height: 80vh;
+    /*-color: aquamarine;*/
+    height: 85vh;
     /*outline: 2px solid black;*/
     background-color: rgba(245, 222, 179, 0.486);
 
@@ -113,19 +117,40 @@ section {
 .Hero_text {
     width: 60%;
     height: auto;
-    /*outline: 2px solid rgb(0, 42, 255);*/
+    opacity: 0;
+    filter: blur(10px);
+    transition: transform 1.5s ease, opacity 800ms ease; /* Base hidden state */
+    transform: translateX(-20%);              /* Base hidden state */
 }
+
+.Hero_text.show {
+    transform: translateX(0);
+     opacity: 1;
+     filter: blur(0);
+
+}
+
+
 .Hero_text h1 {
     font-size: 5em;
     color: #faf7f3;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 
 }
 
 .Hero_text p {
-    font-size: 1.8em;
-    color: #f0eae7;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    font-size: 1.3em;
+    font-family: "Playfair", serif;
+    color: #faf7f3;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 110.4;
 }
 .Hero_imagebox {
     /*outline: 2px solid red;*/
@@ -138,14 +163,21 @@ section {
 
 }
 .hero_image1{
-    height: 1000px;
-    width: 100%;
+  height: 1000px;
+  width: 100%;
   max-width: 100%;
   border: 4px solid whitesmoke;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* adds depth */
-  transform: scale(1.05); /* slight zoom */
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); 
   border-radius: 20px;
+  opacity: 0;                                           /* Base hidden state */
+  transition: transform 1.5s ease, opacity 800ms ease; /* Base hidden state */
+  transform: translateX(100%);              /* Base hidden state */
+}
+.hero_image1.show {
+    transform: scale(1.05) translateX(0);
+     opacity: 1;
+     transition-delay: 0.1s;
+
 }
 
 
@@ -171,17 +203,41 @@ section {
     text-align: center ;
 }
 
+
+
 .Products_container{
     /*outline: 2px solid rgb(18, 70, 239);*/
     width: 100%;
     height: auto;
 }
 
+
 .Products_text {
     font-size: 2em;
-    color:#707070;
+    color:#050505;
     /*outline: 2px solid green;*/
+    opacity: 1;
+        transform: scale(0.8) rotateX(10deg);
+    filter: blur(4px);
+    transition: all 0.9s ease-out;
+    will-change: transform, opacity, filter;
 }
+.Products_text.show {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+    filter: blur(0);
+    transition-delay: 0.2s;
+}
+
+.Products_text h1 {
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
 .Products_carousel {
     overflow: hidden;
     position: relative;
@@ -242,8 +298,13 @@ section {
     margin: 10px;
 }
 .Products_button p {
-    font-size: 1em;
+    font-size: 1.3em;
     color: #faf7f3;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
 }
 /*About Section*/
 #About {
@@ -274,14 +335,23 @@ section {
     
 }
 .About_text h1 {
-    font-size: 3em;
+    font-size: 3.9em;
     color: #050505;
     padding: 20px;
+     font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 .About_text p{
     font-size: 1.2em;
     color: #000000;
     padding: 20px;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
 }
 .About_button {
     width: 30%;
@@ -298,12 +368,26 @@ section {
     color: #e9e5e5;
     text-align: center;
     padding: 15px;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
 
 
 }
 .About_image {
     width: 100%;
     height: auto;
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 800ms ease; /* Base hidden state */
+    transform: translateX(10%);              /* Base hidden state */
+}
+.About_image.show {
+    transform: translateX(0);
+     opacity: 1;
+     transition-delay: 0.1s;
+
 }
 
 .About_image img {
@@ -323,7 +407,11 @@ section {
 }
 #Recipe h1{
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 .Recipe_container {
   display: flex;
@@ -344,6 +432,16 @@ section {
   text-align: center;
   border-radius: 10px;
   height: auto;
+  opacity: 0;
+  transition: transform 1.2s ease, opacity 800ms ease; /* Base hidden state */
+    transform: translateX(10%); 
+  transition: transform 1.3s ease, ;
+  transform: scale(0.7);
+}
+.Recipe_flexitem.show{
+    opacity: 1;
+     transform: translateX(0);
+     opacity: 1;
 }
 .Recipe_fleximage {
     width: 80%;
@@ -359,13 +457,22 @@ section {
     text-align: left;
 }
 .Recipe_flextext h3 {
-    font-size: 2em;
+    font-size: 2.2em;
     padding: 20px;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 .Recipe_flextext p {
     font-size: 1em;
     padding: 5px 10px;
     margin: 0 10px;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
 }
 /*
 .Recipe_button {
@@ -418,16 +525,25 @@ display: flex;
     
 }
 .Story_text h1 {
-    font-size: 3em;
+    font-size: 4em;
     color: #050505;
     padding: 20px;
     text-align: center;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 .Story_text p{
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #000000;
     padding: 20px;
     text-align: center;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
 }
 
 .Story_image {
@@ -440,6 +556,14 @@ display: flex;
     height: auto;
     max-height: 80vh;
     border-radius: 20px;
+    opacity: 0;
+    transform: translateX(-100px) rotate(-10deg);
+    transition: all 0.8s ease-out;
+}
+
+.Story_image img.show {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
 }
 
 /*Contact Section*/
@@ -492,6 +616,10 @@ display: flex;
     font-size: 2em;
     text-decoration: none;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
 }
 .Contact_left p {
@@ -499,6 +627,11 @@ display: flex;
     font-size: 1.2em;
     text-decoration: none;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
 
 }
 
@@ -526,12 +659,24 @@ display: flex;
   text-decoration: none;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
+
 }
 .Contact_column a {
     color:#ffffff;
     font-size: 1.2em;
   text-decoration: none;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
+
 
 }
 
