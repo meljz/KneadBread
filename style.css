@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     font-family: 'Bodoni Moda', serif;
@@ -14,8 +15,7 @@ body{
     font-variation-settings: "opsz" 12;
     font-style: normal;
     line-height: 1.6;
-
-
+    overflow-x: hidden;
 }
 .nav_container {
     position: fixed;
@@ -888,6 +888,24 @@ display: flex;
 }
  }
 @media (max-width: 800px)  /* Tablet Portrait */{ 
+    .nav_links li {
+        margin: 0 5px;
+        padding: 10px 10px;
+        height: 50px;
+    }
+    .nav_links li:hover {
+        background-color: rgba(247, 188, 115, 0.089);
+        transition: background-color 0.3s ease;
+        border-radius: 20px;
+    }
+    .nav_links li a {
+        font-weight: bold;
+        font-size: 1em;
+        letter-spacing: 5px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
     #Hero {
         height: auto
         /*min-height: 80vh;*/
