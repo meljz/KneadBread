@@ -34,14 +34,14 @@
     <!-- Hero Section -->
      <section id = "Hero">
         <div class = "Hero_wrapper">
-            <img src="/image/hero_bread.jpeg" class="hero_bread" alt="hero_bread">
+            <img src="image/hero_bread.jpeg" class="hero_bread" alt="hero_bread">
         <div class = "Hero_box">
             <div class = "Hero_text">
                 <h1>Do you Kneadbread?</h1>
                 <p>Hi there! Thank you for visiting this website, this website is entirely all about breads.</p>
             </div>
             <div class = "Hero_imagebox">
-                <img src="/image/hero_bread.jpeg" class="hero_image1" alt="hero_bread">
+                <img src="image/hero_bread.jpeg" class="hero_image1" alt="hero_bread">
             </div>
         </div>
 
@@ -105,7 +105,7 @@
             <h1>Our Difference</h1>
             <div class = "Recipe_container">
                 <div class = "Recipe_flexitem" >
-                    <img src="/image/bread.png" class = "Recipe_fleximage">
+                    <img src="image/bread.png" class = "Recipe_fleximage">
                     <div class="Recipe_flextext">
                         <h3>Nostalgia</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
@@ -117,7 +117,7 @@
                 </div>
 
                 <div class = "Recipe_flexitem" >
-                    <img src="/image/bread.png" class = "Recipe_fleximage">
+                    <img src="image/bread.png" class = "Recipe_fleximage">
                     <div class="Recipe_flextext">
                     <h3>Fresh</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
@@ -128,7 +128,7 @@
                 </div>
 
                 <div class = "Recipe_flexitem">
-                    <img src="/image/bread.png" class = "Recipe_fleximage" >
+                    <img src="image/bread.png" class = "Recipe_fleximage" >
                     <div class="Recipe_flextext">
                     <h3>Quality</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
@@ -161,7 +161,7 @@
     <!-- Contact -->
     <section id = "Contact">
         <div class = "Contact_background">
-            <img src="/image/hero_bread.jpeg">
+            <img src="image/hero_bread.jpeg">
         </div>
         
         <div class="Contact_container">
@@ -171,6 +171,21 @@
                 <p>0912-345-6789</p>
                 <p>KneadBread@gmail.com</p>
                 <p>MeljohnReyes-2025</p>
+
+                <!--once redirected again from Contact_process.php, will fire this message as pop up-->
+                <!-- this is called JS alert via PHP echo-->
+                <?php if (isset($_GET['contactprocess_success'])): ?>
+                    echo "<script>alert('Thanks for the message! every thoughts count')</script>"
+                <?php endif; ?>
+
+                <!--once filled, will make contact to contactprocess.php-->
+                <form action="Contact_process.php" method="POST">
+                    <input type="text" name="name" placeholder="Your name" required/>
+                    <input type="email" name="email" placeholder="Your email" required/>
+                    <textarea name="message" placeholder="Your thoughts" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+
             </div>
 
             <div class = "Contact_right">

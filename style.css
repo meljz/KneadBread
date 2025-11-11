@@ -691,20 +691,24 @@ display: flex;
     font-weight: 300;
     font-style: normal;
     font-variation-settings: "wdth" 110.4;
-
-
 }
 
 .fi {
   font-size: 30px;
   color:#ffffff;    
   transition: transform 0.3s ease;
-
 }
 
 .fi:hover {
   transform: scale(1.2);
 }
+
+.success-message {
+  color: rgb(30, 194, 227);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 @media (max-width: 1200px)  { 
 /* Everythings okay in Laptop */
  }
