@@ -1,3 +1,14 @@
+
+// Start Nav section
+const burger = document.querySelector(".burger_menu");
+const navlinks = document.querySelector(".nav_links");
+
+burger.addEventListener ('click', () => {
+  navlinks.classList.toggle('active');
+});
+
+// End Nav section
+
 // Start hero section: For the hero section
 const hero_elements = document.querySelectorAll (".hero_image1, .Hero_text, .Products_text, .About_image, .Recipe_flexitem, .Story_image img");
 const observer = new IntersectionObserver((entries) => {
@@ -10,12 +21,12 @@ const observer = new IntersectionObserver((entries) => {
     } 
   });
 }, {
-  threshold: 0.1,
+  threshold: 0.2,
 });
 hero_elements.forEach(item => observer.observe(item));
 
-
 // End hero section: For the hero section
+
 
 
 
