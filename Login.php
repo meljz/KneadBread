@@ -39,7 +39,7 @@
                 <div class = "Login_left_column">
                     <form action="handlers/Login_process.php" method="POST" class = "Login_leftcontents">
                         <h1> login </h1>
-                        <input type="text" name="name" placeholder="Your name" required/>
+                        <!--<input type="text" name="name" placeholder="Your name" required/>-->
                         <input type="email" name="email" placeholder="Your email" required/>
                         <input type="password" name="password" placeholder="Your password" required/>
                         <button type="submit" name="login">Submit</button>

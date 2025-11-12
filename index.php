@@ -71,7 +71,6 @@ session_start();
             unset($_SESSION['login_error']);
         }
 
-
         ?>
          
     <!-- Navigation -->
@@ -90,8 +89,21 @@ session_start();
                 <li><a href="#Contact"> Contact</a></li>
                 <li><a href="Login.php"> login</a></li>
                 <li><a href="Register.php"> Register</a></li>
+
+                <!--Wrap logout like jinja in Django <% %>-->
+                <?php if(isset(($_SESSION['user_name']))): ?>
+                    <div class = "logout">
+                        <li><a href="handlers/Logout.php"> Logout</a></li>
+                    </div>
+                <?php endif ?>
+
+                <!--Who is current user-->
+                <?php if (isset($_SESSION['user_name'])): ?>
+                    <div class = "status">
+                        <p>| <?= htmlspecialchars($_SESSION['user_name']); ?></p>
+                    </div>
+                <?php endif; ?>
             </ul>
-        
     </div>
 
     <!-- Hero Section -->
@@ -242,7 +254,7 @@ session_start();
                 <?php endif; ?>
 
                 <!--once filled, will make contact to contactprocess.php-->
-                <form action="Contact_process.php" method="POST">
+                <form action="handlers/Contact_process.php" method="POST">
                     <input type="text" name="name" placeholder="Your name" required/>
                     <input type="email" name="email" placeholder="Your email" required/>
                     <textarea name="message" placeholder="Your thoughts" required></textarea>

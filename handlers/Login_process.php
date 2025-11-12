@@ -1,10 +1,11 @@
 <?php 
 session_start();
-include '../includes/config.php';
+include '../includes/db_main.php';
+
 
 
 if (isset($_POST["login"])) {
-    $name = $_POST ["name"];
+    //$name = $_POST ["name"];
     $password = $_POST ["password"];
     $email = $_POST ["email"];
 

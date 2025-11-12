@@ -38,6 +38,13 @@ body{
     height: auto;
 
 }
+.status {
+    color: rgba(248, 244, 16, 0.89);
+    display: flex;
+}
+.status p {
+    font-size: 2em;
+}
 
 .nav_links li {
     margin: 0 20px;
