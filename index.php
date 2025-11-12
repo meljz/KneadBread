@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +16,64 @@
                     
 
     </head>
-    <body>      
+    <body>    
+        <?php
+        // registration success
+        if (isset($_SESSION['registration_success'])) {
+            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['registration_success'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['registration_success']);
+        }
+
+        //  registration not successful
+        if (isset($_SESSION['registration_error'])) {
+            echo '
+            <div id="errorMsg" style="background: red; color: white; padding: 15px; text-align: center; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 80%; max-width: 500px; border-radius: 8px; z-index: 9999;">
+                ' . $_SESSION['registration_error'] . '
+            </div>
+            <script>
+                setTimeout(function() {
+                    document.getElementById("errorMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['error']);
+        }
+
+        //  login successful
+        if (isset($_SESSION['login_success'])) {
+            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['login_success'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['login_success']);
+        }
+
+        //  login error
+        if (isset($_SESSION['login_error'])) {
+            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['login_error'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['login_error']);
+        }
+
+
+        ?>
+         
     <!-- Navigation -->
     <div class = "nav_container">
         <div class = "burger_menu">
@@ -27,6 +88,8 @@
                 <li><a href="#Recipe">Recipes</a></li>
                 <li><a href="#Story"> About Us</a></li>
                 <li><a href="#Contact"> Contact</a></li>
+                <li><a href="Login.php"> login</a></li>
+                <li><a href="Register.php"> Register</a></li>
             </ul>
         
     </div>

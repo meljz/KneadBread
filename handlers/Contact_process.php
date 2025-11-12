@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $email = $_POST["email"];
    $message = $_POST["message"];
 
-   header ("Location: index.php?contactprocess_success=1");
+   header ("Location: index.php?contactprocess_success");
    exit();
 }
 ?>
