@@ -83,7 +83,7 @@ session_start();
 
             <ul class = "nav_links">
                 <li><a href="#Hero">Home</a></li>
-                <li><a href="#Products">Shop</a></li>
+                <li><a href="#Product">Shop</a></li>
                 <li><a href="#Recipe">Recipes</a></li>
                 <li><a href="#Story"> About Us</a></li>
                 <li><a href="#Contact"> Contact</a></li>
@@ -148,7 +148,8 @@ session_start();
                     
                 </div>
                 <button class="Products_button">
-                        <p>What's Hot?</p>
+                        <a href = "shop.php"><p>What's Hot?</p></a>
+
                     </button>
             </div>
         </div>
@@ -163,7 +164,7 @@ session_start();
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
                     </p>
                     <button class = "About_button">
-                        <p>Whats New?</p>
+                        <a href = "shop.php"><p>Whats New?</p></a>
                     </button>
                 </div>
                 <div class = "About_image">
@@ -233,6 +234,24 @@ session_start();
         <!--</div>-->
      </section>
 
+    <!---Form Section-->  
+    <section id = "form_section">
+        <h1>hello</h1>
+        <!--once redirected again from Contact_process.php, will fire this message as pop up-->
+                <!-- this is called JS alert via PHP echo-->
+                <?php if (isset($_GET['contactprocess_success'])): ?>
+                    echo "<script>alert('Thanks for the message! every thoughts count')</script>"
+                <?php endif; ?>
+
+                <!--once filled, will make contact to contactprocess.php-->
+                <form action="handlers/Contact_process.php" method="POST">
+                    <input type="text" name="name" placeholder="Your name" required/>
+                    <input type="email" name="email" placeholder="Your email" required/>
+                    <textarea name="message" placeholder="Your thoughts" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+    </section>
+
     <!-- Contact -->
     <section id = "Contact">
         <div class = "Contact_background">
@@ -246,22 +265,8 @@ session_start();
                 <p>0912-345-6789</p>
                 <p>KneadBread@gmail.com</p>
                 <p>MeljohnReyes-2025</p>
-
-                <!--once redirected again from Contact_process.php, will fire this message as pop up-->
-                <!-- this is called JS alert via PHP echo-->
-                <?php if (isset($_GET['contactprocess_success'])): ?>
-                    echo "<script>alert('Thanks for the message! every thoughts count')</script>"
-                <?php endif; ?>
-
-                <!--once filled, will make contact to contactprocess.php-->
-                <form action="handlers/Contact_process.php" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required/>
-                    <input type="email" name="email" placeholder="Your email" required/>
-                    <textarea name="message" placeholder="Your thoughts" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-
             </div>
+
 
             <div class = "Contact_right">
                 <div class="Contact_column">
@@ -282,6 +287,8 @@ session_start();
             </div>
         </div>
     </section>
+
+
         
 
   <script src="script.js"></script>
