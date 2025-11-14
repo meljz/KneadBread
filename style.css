@@ -882,7 +882,7 @@ display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 20px 70px;
+    padding: 50px 70px 20px 70px;
     outline: 2px solid red;
 }
 
@@ -891,25 +891,27 @@ display: flex;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    outline: 2px solid red;
-    width: 80%;
-    height: 300px;
+    outline: 2px solid rgb(255, 0, 242);
+    width: 100%;
+    height: auto;
     padding: 20px;
-    gap: 20px;
+    gap: 50px;
+    justify-content: center;
 }
 .Shop_card {
-    flex: 1;
+    flex: 0 1 250px;  /* dont grow , go shrink, base width is 250px */
+    min-width: 250px;
     height: auto;
-    width: 100%;
-    /*min-width: 250px;*/
-
     padding: 20px;
     background-color: rgb(117, 113, 113);
     outline: 2px solid blue;
     text-align: center;
     height: auto;
-
-
+}
+.Shop_card img {
+    width: 60%;
+    height: auto;
+    outline: 2px solid red;
 }
 
 @media (max-width: 1200px)  { 

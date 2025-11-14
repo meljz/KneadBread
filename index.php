@@ -83,7 +83,7 @@ session_start();
 
             <ul class = "nav_links">
                 <li><a href="#Hero">Home</a></li>
-                <li><a href="#Product">Shop</a></li>
+                <li><a href="#Products">Shop</a></li>
                 <li><a href="#Recipe">Recipes</a></li>
                 <li><a href="#Story"> About Us</a></li>
                 <li><a href="#Contact"> Contact</a></li>
@@ -148,7 +148,7 @@ session_start();
                     
                 </div>
                 <button class="Products_button">
-                        <a href = "shop.php"><p>What's Hot?</p></a>
+                        <a href = "shop.php"><p>Shop Now!</p></a>
 
                     </button>
             </div>
@@ -164,7 +164,7 @@ session_start();
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
                     </p>
                     <button class = "About_button">
-                        <a href = "shop.php"><p>Whats New?</p></a>
+                        <a href = "shop.php"><p>Whats Hot?</p></a>
                     </button>
                 </div>
                 <div class = "About_image">

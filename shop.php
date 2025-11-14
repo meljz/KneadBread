@@ -48,77 +48,127 @@
             </ul>
     </div>
             <div class = "Shop_container">
-                <h1>Welcom to Shop</h1>
+                <h1>Welcome to Shop</h1>
                 <div class = "Shop_within">
-                    
+                
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 1 </h3>
-                            <p>Card 1  text</p>
-                        </div>
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <form action = handlers/Add_to_cart.php method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="card_1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 2 </h3>
-                            <p>Card 2  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <button>Add to Cart</button>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
                     <div class = "Shop_card">
-                        <img src = "/image/about_bread.png" alt = "card image">
+                        <img src = "image/about_bread.png" alt = "card image">
                         <div class = "Shop_card_text">
                             <h3>Card 3 </h3>
-                            <p>Card 3  text</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
+                    <div class = "Shop_card">
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <div class = "Shop_card_text">
+                            <h3>Card 3 </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
+                    <div class = "Shop_card">
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <div class = "Shop_card_text">
+                            <h3>Card 3 </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
+                    <div class = "Shop_card">
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <div class = "Shop_card_text">
+                            <h3>Card 3 </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
+                    <div class = "Shop_card">
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <div class = "Shop_card_text">
+                            <h3>Card 3 </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
+                    <div class = "Shop_card">
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <div class = "Shop_card_text">
+                            <h3>Card 3 </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
+                    <div class = "Shop_card">
+                        <img src = "image/about_bread.png" alt = "card image">
+                        <div class = "Shop_card_text">
+                            <h3>Card 3 </h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         </div>
                     </div>
 
