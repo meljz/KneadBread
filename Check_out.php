@@ -1,5 +1,10 @@
 <?php 
     session_start();
+    
+    if (!isset($_SESSION['user_name'])) {
+        header('Location: Login.php');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,12 +32,12 @@
 
                 <ul class = "nav_links">
                     <li><a href="index.php#Hero">Home</a></li>
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="index.php#Recipe">Recipes</a></li>
+                    <li><a href="shop.php">Back to Shop</a></li>
+                    <!--<li><a href="index.php#Recipe">Recipes</a></li>
                     <li><a href="index.php#Story"> About Us</a></li>
                     <li><a href="index.php#Contact"> Contact</a></li>
                     <li><a href="Login.php"> login</a></li>
-                    <li><a href="Register.php"> Register</a></li>
+                    <li><a href="Register.php"> Register</a></li>-->
 
 
                     <!--Wrap logout like jinja in Django <% %>-->
@@ -52,19 +57,25 @@
         </div>
    </section>
 
-   <h1>HELLO THIS IS Check_out</h1>
-    <?php if (!empty ($_SESSION['Cart'])):  ?> 
-        <h1>Your items are: </h1>  
-        <ul>
-            <?php foreach ($_SESSION['Cart'] as $Items): ?>
-                <li><?= htmlspecialchars($Items['Product_name']); ?> - <?=  htmlspecialchars($Items['Product_price']); ?> </li>
-            <?php endforeach; ?>
+             
+        <h1>HELLO THIS IS Check_out</h1>
+        <?php if (!empty ($_SESSION['Cart'])):  ?> 
+            <h1>Your items are: </h1>  
+            <ul>
+                <?php foreach ($_SESSION['Cart'] as $Items): ?>
+                    <li><?= htmlspecialchars($Items['Product_name']); ?> - <?=  htmlspecialchars($Items['Product_price']); ?> </li>
+                <?php endforeach; ?>
 
-        </ul>     
-    <?php else: ?>
-        <p>Cart is empty</p>            
-    <?php endif; ?> 
+            </ul>     
+        <?php else: ?>
+            <p>Cart is empty</p>            
+        <?php endif; ?> 
         
+        <!--FINAL CHECKOUT-->
+        <form action = "" method ="POST">
+            <button type="submit">Checkout?</button>
+        </form>
+            
 
 
          <script src="script.js"></script>

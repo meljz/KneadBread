@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include '../includes/db_main.php';
 
 if (isset ($_POST["Add_to_cart"])){
     $Items = [

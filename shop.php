@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,11 +29,15 @@
             <ul class = "nav_links">
                 <li><a href="index.php#Hero">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
-                <li><a href="index.php#Recipe">Recipes</a></li>
+                <li><a href="Check_out.php">My Cart</a></li>
+                <?php if (!isset($_SESSION["user_name"])): ?>
+                    <li><a href="Register.php"> Register</a></li>
+                    <li><a href="Login.php"> login</a></li>
+                <?php endif; ?>
+                
+                <!--<li><a href="index.php#Recipe">Recipes</a></li>
                 <li><a href="index.php#Story"> About Us</a></li>
-                <li><a href="index.php#Contact"> Contact</a></li>
-                <li><a href="Login.php"> login</a></li>
-                <li><a href="Register.php"> Register</a></li>
+                <li><a href="index.php#Contact"> Contact</a></li>-->
 
 
                 <!--Wrap logout like jinja in Django <% %>-->
@@ -53,12 +61,12 @@
                 
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <form action = handlers/Add_to_cart.php method="POST">
+                        <form action = "handlers/Add_to_cart.php" method="POST">
                             <div class = "Shop_card_text">
                                 <h3>Card 1 </h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 <input type = "hidden" name="Product_id" value ="1">
-                                <input type = "hidden" name="Product_name" value ="card_1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
                                 <input type = "hidden" name="Product_price" value ="10">
                                 <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
                             </div>
@@ -67,109 +75,212 @@
 
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 2 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            <button>Add to Cart</button>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 2 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="2">
+                                <input type = "hidden" name="Product_name" value ="Bread2">
+                                <input type = "hidden" name="Product_price" value ="5">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 3 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="3">
+                                <input type = "hidden" name="Product_name" value ="Bread3">
+                                <input type = "hidden" name="Product_price" value ="15">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">1
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
+
                     <div class = "Shop_card">
                         <img src = "image/about_bread.png" alt = "card image">
-                        <div class = "Shop_card_text">
-                            <h3>Card 3 </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        </div>
+                        <form action = "handlers/Add_to_cart.php" method="POST">
+                            <div class = "Shop_card_text">
+                                <h3>Card 1 </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <input type = "hidden" name="Product_id" value ="1">
+                                <input type = "hidden" name="Product_name" value ="Bread1">
+                                <input type = "hidden" name="Product_price" value ="10">
+                                <button type = "submit" name = "Add_to_cart">Add to Cart</button>    
+                            </div>
+                        </form> 
                     </div>
 
                 </div>

@@ -87,8 +87,10 @@ session_start();
                 <li><a href="#Recipe">Recipes</a></li>
                 <li><a href="#Story"> About Us</a></li>
                 <li><a href="#Contact"> Contact</a></li>
-                <li><a href="Login.php"> login</a></li>
-                <li><a href="Register.php"> Register</a></li>
+                <?php if (!isset(($_SESSION['user_name']))): ?>
+                    <li><a href="Login.php"> login</a></li>
+                    <li><a href="Register.php"> Register</a></li>
+                <?php endif ?>
 
                 <!--Wrap logout like jinja in Django <% %>-->
                 <?php if(isset(($_SESSION['user_name']))): ?>
