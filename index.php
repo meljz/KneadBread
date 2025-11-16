@@ -134,11 +134,11 @@ session_start();
                 </div>
                 <div class = "Products_carousel">
                     <div class = "Products_track">
-                        <div class = "Carousel_items"><img src = "image/hero_bread.jpeg" alt="Carousel_items1"/></div>
-                        <div class = "Carousel_items"><img src = "image/hero_bread.jpeg" alt="Carousel_items2"/></div>
-                        <div class = "Carousel_items"><img src = "image/hero_bread.jpeg" alt="Carousel_items3"/></div>
-                        <div class = "Carousel_items"><img src = "image/hero_bread.jpeg" alt="Carousel_items4"/></div>
-                        <div class = "Carousel_items"><img src = "image/hero_bread.jpeg" alt="Carousel_items5"/></div>
+                        <div class = "Carousel_items"><img src = "image/ube.png" alt="Carousel_items1"/></div>
+                        <div class = "Carousel_items"><img src = "image/egg pie.png" alt="Carousel_items2"/></div>
+                        <div class = "Carousel_items"><img src = "image/binangkal.png" alt="Carousel_items3"/></div>
+                        <div class = "Carousel_items"><img src = "image/lakas.png" alt="Carousel_items4"/></div>
+                        <div class = "Carousel_items"><img src = "image/pineapplepie.png" alt="Carousel_items5"/></div>
                     </div>
                     <div class="Products_nav">
                         <span class="dot active"></span>

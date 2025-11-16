@@ -73,7 +73,7 @@
         
         <!--FINAL CHECKOUT-->
         <form action = "" method ="POST">
-            <button type="submit">Checkout?</button>
+            <button type="submit">Ready to Checkout?</button>
         </form>
             
 

@@ -1,5 +1,8 @@
 DAY 5: 
+fixed flow logic of shop to checkout
+fix nav logic
 
 
 DAY 6:
 add necessary and fix logic when finally checking out 
+add error message

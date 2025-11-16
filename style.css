@@ -886,12 +886,21 @@ display: flex;
     outline: 2px solid red;
 }
 
+.Shop_container h1 {
+    font-size: 4em;
+    padding: 5px;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .Shop_within {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    outline: 2px solid rgb(255, 0, 242);
+    /*outline: 2px solid rgb(255, 0, 242);*/
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 100%;
     height: auto;
     padding: 20px;
@@ -903,15 +912,50 @@ display: flex;
     min-width: 250px;
     height: auto;
     padding: 20px;
-    background-color: rgb(117, 113, 113);
-    outline: 2px solid blue;
+    /*background-color: rgb(117, 113, 113);*/
+    /*outline: 2px solid blue;*/
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-align: center;
     height: auto;
 }
 .Shop_card img {
-    width: 60%;
+    width: 90%;
+    height: 150px;
+    /*outline: 2px solid red;*/
+}
+
+.Shop_card_text {
+    text-align: center;
+}
+
+.Shop_card_text h3 {
+    font-size: 1.7em;
+    padding: 5px;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.Shop_card_text p {
+    font-size: .9em;
+    margin: 0 5px;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 110.4;
+    
+}
+.Add_to_class {
+    width: 50%;
     height: auto;
-    outline: 2px solid red;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.Add_to_class:hover {
+    background-color: burlywood;
 }
 
 @media (max-width: 1200px)  { 
