@@ -4,5 +4,7 @@ fix nav logic
 
 
 DAY 6:
-add necessary and fix logic when finally checking out 
-add error message
+added bread images for the shop
+fixed the error and success message
+fixed the layout of checkout.php
+fixed the flow and logic when checking out (db is already connected) 

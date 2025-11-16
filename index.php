@@ -22,7 +22,6 @@ session_start();
         if (isset($_SESSION['registration_success'])) {
             echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['registration_success'] . '
             </div>
-
             <script>
                 setTimeout(function() {
                     document.getElementById("successMsg").style.display = "none";
@@ -34,8 +33,7 @@ session_start();
         //  registration not successful
         if (isset($_SESSION['registration_error'])) {
             echo '
-            <div id="errorMsg" style="background: red; color: white; padding: 15px; text-align: center; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 80%; max-width: 500px; border-radius: 8px; z-index: 9999;">
-                ' . $_SESSION['registration_error'] . '
+            <div id="errorMsg" class="toast-error">' . $_SESSION['registration_error'] . '
             </div>
             <script>
                 setTimeout(function() {
@@ -60,7 +58,7 @@ session_start();
 
         //  login error
         if (isset($_SESSION['login_error'])) {
-            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['login_error'] . '
+            echo '<div id="successMsg" class="toast-error"> ' . $_SESSION['login_error'] . '
             </div>
 
             <script>
@@ -115,10 +113,10 @@ session_start();
         <div class = "Hero_box">
             <div class = "Hero_text">
                 <h1>Do you Kneadbread?</h1>
-                <p>Hi there! Thank you for visiting this website, this website is entirely all about breads.</p>
+                <p>Hi there! Thank you for visiting this website, this website is entirely all about local Filipino bakeries in the Philippines often called <i>"Panaderia"</i> with variety of breads for different tastebuds. Tara! come get to know more about local bakeries and shop! </p>
             </div>
             <div class = "Hero_imagebox">
-                <img src="image/hero_bread.jpeg" class="hero_image1" alt="hero_bread">
+                <img src="image/bakery.jpg" class="hero_image1" alt="hero_bread">
             </div>
         </div>
 
@@ -163,7 +161,7 @@ session_start();
             <div class = About_container>
                 <div class = "About_text">
                     <h1>Classic Pinoy Panaderia Collection</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                    <p>Step into the heart of Filipino tradition with the Classic Pinoy Panaderia Collection — a digital tribute to the timeless breads and pastries that define every local bakery. From the soft, golden crust of Pandesal to the sweet, flaky layers of Hopia and Pan de Coco, this collection celebrates the flavors, textures, and memories baked into every bite.
                     </p>
                     <button class = "About_button">
                         <a href = "shop.php"><p>Whats Hot?</p></a>
@@ -180,13 +178,13 @@ session_start();
     <!-- Recipe -->
      <section id = "Recipe">
         <!--<div class = "section_container">-->
-            <h1>Our Difference</h1>
+            <h1>Tatak Panaderia, Tatak Pinoy</h1>
             <div class = "Recipe_container">
                 <div class = "Recipe_flexitem" >
-                    <img src="image/bread.png" class = "Recipe_fleximage">
+                    <img src="image/nostalgia.jpg" class = "Recipe_fleximage">
                     <div class="Recipe_flextext">
                         <h3>Nostalgia</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                        <p>Every tinapay tells a story. From childhood merienda to late-night pandesal runs, our breads bring back the comforting flavors of home and the memories baked into every bite.</p>
                     </div>
                      <!--<button class ="Recipe_button">
                         <p>View Article</p>
@@ -195,10 +193,10 @@ session_start();
                 </div>
 
                 <div class = "Recipe_flexitem" >
-                    <img src="image/bread.png" class = "Recipe_fleximage">
+                    <img src="image/fresh.jpg" class = "Recipe_fleximage">
                     <div class="Recipe_flextext">
                     <h3>Fresh</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                    <p>Laging bagong hurno, laging handa. We bake daily with care and consistency — no shortcuts, no stale surprises. Just warm, soft, and honest bread straight from the oven.</p>
                     </div>
                     <!--<button class ="Recipe_button">
                         <p>View Article</p>
@@ -206,10 +204,10 @@ session_start();
                 </div>
 
                 <div class = "Recipe_flexitem">
-                    <img src="image/bread.png" class = "Recipe_fleximage" >
+                    <img src="image/quality.jpg" class = "Recipe_fleximage" >
                     <div class="Recipe_flextext">
                     <h3>Quality</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                    <p>Hindi basta-basta — basta masarap. We use trusted ingredients and time-honored techniques to ensure every loaf meets the standard of your suking panaderia: simple, satisfying, and made with heart.</p>
                     </div>
                      <!--<button class ="Recipe_button">
                         <p>View Article</p>
@@ -225,7 +223,12 @@ session_start();
             <div class = "Story_container">
                 <div class = "Story_text">
                     <h1>Kneadbread Story</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                    <p>At KneadBread, we believe tinapay isn’t just baked, it’s experienced. By combining the warmth of the panaderia with the power of technology, building a digital space where tradition meets innovation. Every click supports a panadero, every scroll celebrates heritage, and every checkout uplifts the community.<br>
+                        KneadBread was born from the love of breadmaking, with the touch of  digital space para sa mga tinapay na may kwento, at kwentong may tinapay.<br>
+
+Dito, hindi lang basta shop. It’s a tribute to our panaderos at panaderas — yung gumigising ng maaga, nagmamasa ng may puso, at nagbebenta ng tinapay na walang sawa. We uplift the spirit of local bakeries while offering breads that taste like home.<br>
+
+
                     </p>
                 </div>
                 <div class = "Story_image">

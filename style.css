@@ -427,11 +427,12 @@ body{
 }
 #Recipe h1{
     text-align: center;
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: "Bodoni Moda", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    margin-bottom: 40px;
 }
 .Recipe_container {
   display: flex;
@@ -709,7 +710,25 @@ display: flex;
 .fi:hover {
   transform: scale(1.2);
 }
+.toast-success {
+   background-color: #4caf4f96;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1em;
+  color: black;
+}
 
+.toast-error {
+   background-color: #af684c96;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+    font-size: 1em;
+  color: black;
+}
 .success-message {
   color: rgb(30, 194, 227);
   font-weight: bold;
@@ -798,29 +817,94 @@ display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 70px;
-    background-color: #347ccf47;
+    background-color: rgba(187, 168, 134, 0.507);
 
 
 }
 .Login_within {
     display: flex;
     flex-direction: row;
-    outline: 2px solid red;
+    /*outline: 2px solid red;*/
     width: 100%;
     height: 70vh;;
     padding: 20px;
     gap: none;
+    background-color: #ffffffce;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
 .Login_right {
     flex:1;
-    outline: 2px solid rgb(0, 136, 255);
+    /*outline: 2px solid rgb(0, 136, 255);*/
+}
+.Login_right_column{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.Login_right_img1{
+    position:absolute;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.Login_right_img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    clip-path: ellipse(95% 60% at 10% 15%);
+    box-shadow: inset 0 0 50px 20px rgba(255, 255, 255, 0.5);
+}
+.Login_right_img2{
+    position:absolute;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: 1;
+    box-shadow: inset 0 0 50px 20px rgba(255, 255, 255, 0.5);
+}
+.Login_right_img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    box-shadow: inset 0 0 50px 20px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+.Login_right_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    height: 66vh;
+    opacity: .8;
+    z-index: 5;
+    padding: 20px;
+    justify-content: flex-end;
+}
+.Login_right_text h1 {
+    font-size: 4em;
+    color: rgb(0, 0, 0);
+}
+.Login_right_text p {
+    font-size: 1.5em;
+    color: rgba(24, 24, 24, 0.959);
 }
 .Login_left {
     flex:1;
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 2px solid rgb(0, 30, 255);
+    /*outline: 2px solid rgb(0, 30, 255);*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     flex-direction: column;
 }
 .Login_left_column {
@@ -830,7 +914,8 @@ display: flex;
     padding: 30px 0;
     flex-direction: column;
     line-height: 40px;
-    outline: 2px solid lightblue;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .Login_leftcontents {
     width: 100%;
@@ -957,6 +1042,112 @@ display: flex;
 .Add_to_class:hover {
     background-color: burlywood;
 }
+
+/*Checkout CSS*/
+.Checkout_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 70px;
+    background-color: #ffffff;
+}
+
+.Checkout_title {
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%;
+}
+
+.Checkout_title h1 {
+    color: #0c0c0c;
+    margin: 0;
+    padding: 20px;
+}
+.Checkout_within {
+    display: flex;
+    flex-direction: row;
+    /*outline: 2px solid red;*/
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 100%;
+    height: 70vh;
+    padding: 20px;
+    gap: none;
+}
+.Checkout_right {
+    flex:1;
+    /*outline: 2px solid rgb(0, 136, 255);*/
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.Checkout_right_column {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    line-height: 40px;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.Checkout_rightcontents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Checkout_left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*outline: 2px solid rgb(0, 30, 255);*/
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    flex-direction: column;
+}
+.Checkout_left_column {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    line-height: 40px;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.Checkout_leftcontents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Btn_checkout {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: .9em;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+
+}
+.Btn_checkout:hover {
+    background-color: rgba(10, 184, 10, 0.384);
+}
+
 
 @media (max-width: 1200px)  { 
 /* Everythings okay in Laptop */

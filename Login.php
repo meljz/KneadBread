@@ -32,7 +32,6 @@
             </ul>
         
     </div>
-
     <div class = "Login_container">
         <div class = "Login_within">
             <div class = "Login_left">
@@ -48,6 +47,18 @@
             </div>
 
             <div class = "Login_right">
+                <div class = "Login_right_column">
+                    <div class = "Login_right_img1">
+                        <img src="image/login_bread.jpg">
+                    </div>
+                    <div class = "Login_right_img2">
+                        <img src="image/hero_bread.jpeg">
+                    </div>
+                    <div class = "Login_right_text">
+                        <h1>Try out latest Pinoy Collection</h1>
+                        <p>lorem ipsum lorem ipsum lorem ipsum</p>
+                    </div>
+                </div>
             </div>
             
          </div>

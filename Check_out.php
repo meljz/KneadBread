@@ -21,6 +21,32 @@
 
     </head>
     <body>
+        
+    <?php   //CHECKOUT MESSAGE       
+        if (isset($_SESSION['checkout_success'])) { // checkout success
+            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['checkout_success'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['checkout_success']);
+        }
+
+        if (isset($_SESSION['checkout_error'])) {       // checkout error
+            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['checkout_error'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['checkout_error']);
+        }
+    ?>
          <!-- Navigation -->
     <section class = "Check_out">
         <div class = "nav_container">
@@ -57,27 +83,55 @@
         </div>
    </section>
 
-             
-        <h1>HELLO THIS IS Check_out</h1>
-        <?php if (!empty ($_SESSION['Cart'])):  ?> 
-            <h1>Your items are: </h1>  
-            <ul>
-                <?php foreach ($_SESSION['Cart'] as $Items): ?>
-                    <li><?= htmlspecialchars($Items['Product_name']); ?> - <?=  htmlspecialchars($Items['Product_price']); ?> </li>
-                <?php endforeach; ?>
 
-            </ul>     
-        <?php else: ?>
-            <p>Cart is empty</p>            
-        <?php endif; ?> 
+
+    <div class = "Checkout_container">
+        <div class = "Checkout_within">
+            <div class = "Checkout_left">
+                <div class = "Checkout_title">
+                    <h1>Shopping Cart: </h1>
+                </div>
+                <div class = "Checkout_left_column">  
+                    <div class = "Checkout_leftcontents">
+                        <?php if (!empty ($_SESSION['Cart'])):  ?> 
+                            <h1>Items: </h1>  
+                            <ul>
+                                <?php foreach ($_SESSION['Cart'] as $Items): ?>
+                                    <li><?= htmlspecialchars($Items['Product_name']); ?> - <?=  htmlspecialchars($Items['Product_price']); ?> </li>
+                                <?php endforeach; ?>
+
+                            </ul>     
+                        <?php else: ?>
+                            <p>Cart is empty</p>            
+                        <?php endif; ?> 
+                        
+                        <!--FINAL CHECKOUT-->
+                        <form action = "Handlers/Checkout_process.php" method ="POST">
+                            <button type="submit" name="Final_checkout" class = "Btn_checkout">Checkout</button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "Checkout_right">
+                <div class = "Checkout_title">
+                    <h1>Receipt: </h1>
+                </div>
+                <div class = "Checkout_right_column">
+                    <div class = "Checkout_rightcontents">
+                        <h2>Your Recent Order:</h2>
+                        <?php if(isset( $_SESSION['Receipts'])): ?>
+                            <p><strong>Item: </strong><?= htmlspecialchars ($_SESSION['Receipts']['products'])?></p>
+                            <p><strong>Total: </strong><?= htmlspecialchars ($_SESSION['Receipts']['total_price'])?></p>
+                        <?php else: ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         
-        <!--FINAL CHECKOUT-->
-        <form action = "" method ="POST">
-            <button type="submit">Ready to Checkout?</button>
-        </form>
-            
-
-
+    
          <script src="script.js"></script>
     </body>
 
