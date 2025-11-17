@@ -37,10 +37,20 @@
             <div class = "Login_left">
                 <div class = "Login_left_column">
                     <form action="handlers/Login_process.php" method="POST" class = "Login_leftcontents">
-                        <h1> login </h1>
+                        <h1> Welcome Back </h1>
+                        <h3>Sign in to your KneadBread Account</h3>
                         <!--<input type="text" name="name" placeholder="Your name" required/>-->
-                        <input type="email" name="email" placeholder="Your email" required/>
-                        <input type="password" name="password" placeholder="Your password" required/>
+                        <div class = "Register_placeholder"> 
+                            <p>Email: </p>
+                            <input type="email" name="email" placeholder="Your email" required/>
+                        </div>
+
+                        <div class = "Register_placeholder"> 
+                            <p>Password: </p>
+                            <input type="password" name="password" placeholder="Your password" required/>
+                        </div>
+                        
+                        
                         <button type="submit" name="login">Submit</button>
                     </form>
                 </div> 
@@ -49,14 +59,14 @@
             <div class = "Login_right">
                 <div class = "Login_right_column">
                     <div class = "Login_right_img1">
-                        <img src="image/login_bread.jpg">
+                        <img src="image/nostalgia.jpg">
                     </div>
                     <div class = "Login_right_img2">
                         <img src="image/hero_bread.jpeg">
                     </div>
                     <div class = "Login_right_text">
                         <h1>Try out latest Pinoy Collection</h1>
-                        <p>lorem ipsum lorem ipsum lorem ipsum</p>
+                        <p>One of the best online panaderia at Pampanga!</p>
                     </div>
                 </div>
             </div>

@@ -35,21 +35,44 @@
 
     <div class = "Register_container">
         <div class = "Register_within">
-            <div class = "Register_left">
-
-            </div>
             <div class = "Register_right">
                 <div class = "Register_right_column">
+                    <div class = "Register_right_img1">
+                        <img src="image/login_bread.jpg">
+                    </div>
+                    <div class = "Register_right_img2">
+                        <img src="image/hero_bread.jpeg">
+                    </div>
+                    <div class = "Register_right_text">
+                        <h1> Register to get your first bread for <strong>free!</strong></h1>
+                        <p>Disclaimer: One bread per person only!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "Register_left">
+                <div class = "Register_left_column">
                     <form action="handlers/Register_process.php" method="POST" class = "Register_rightcontents">
-                        <h1> Register </h1>
-                        <input type="text" name="name" placeholder="Your name" required/>
-                        <input type="email" name="email" placeholder="Your email" required/>
-                        <input type="password" name="password" placeholder="Your password" required/>
+                        <h1> New to KneadBread? </h1>
+                        <h3> Start to Register!</h3>
+                        <div class = "Register_placeholder"> 
+                            <p>Name: </p>
+                            <input type="text" name="name" placeholder="Your name" required/>
+                        </div>
+
+                        <div class = "Register_placeholder"> 
+                            <p>Email: </p>
+                            <input type="email" name="email" placeholder="Your email" required/>
+                        </div>
+
+                        <div class = "Register_placeholder"> 
+                            <p>Password: </p>
+                            <input type="password" name="password" placeholder="Your password" required/>
+                        </div>
                         <button type="submit" name="register">Submit</button>
                     </form>
                 </div> 
             </div>
-            
          </div>
         
     </div>  

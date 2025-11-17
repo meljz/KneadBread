@@ -749,22 +749,24 @@ display: flex;
 .Register_within {
     display: flex;
     flex-direction: row;
-    outline: 2px solid red;
+    /*(outline: 2px solid red;*/
     width: 100%;
     height: 70vh;;
     padding: 20px;
     gap: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .Register_left {
     flex:1;
-    outline: 2px solid rgb(0, 136, 255);
+    /*outline: 2px solid rgb(0, 136, 255);*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .Register_right {
     flex:1;
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 2px solid rgb(0, 30, 255);
+    /*outline: 2px solid rgb(0, 30, 255);*/
     flex-direction: column;
 }
 .Register_right_column {
@@ -774,10 +776,11 @@ display: flex;
     padding: 30px 0;
     flex-direction: column;
     line-height: 40px;
-    outline: 2px solid lightblue;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .Register_rightcontents {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -785,9 +788,11 @@ display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 0 auto;
+   
 }
 .Register_right_column input {
-  width: 60%;
+  width: 40%;
   height: 40px;
   padding: 5px;
   margin-bottom: 10px;
@@ -797,7 +802,7 @@ display: flex;
 }
 
 .Register_right_column button {
-  width: 40%;
+  width: 20%;
   height: 40px;
   padding: 5px;
   margin: 10px auto;
@@ -885,18 +890,20 @@ display: flex;
     text-align: left;
     width: 100%;
     height: 66vh;
-    opacity: .8;
+    opacity: 1;
     z-index: 5;
     padding: 20px;
     justify-content: flex-end;
 }
 .Login_right_text h1 {
-    font-size: 4em;
-    color: rgb(0, 0, 0);
+    font-size: 5em;
+    font-style:oblique;
+    color: rgb(255, 255, 255);
 }
 .Login_right_text p {
     font-size: 1.5em;
-    color: rgba(24, 24, 24, 0.959);
+    font-style: oblique;
+    color: rgba(252, 252, 252, 0.959);
 }
 .Login_left {
     flex:1;
@@ -928,7 +935,7 @@ display: flex;
     justify-content: space-evenly;
 }
 .Login_left_column input {
-  width: 60%;
+  width: 50%;
   height: 40px;
   padding: 5px;
   margin-bottom: 10px;
@@ -938,7 +945,7 @@ display: flex;
 }
 
 .Login_left_column button {
-  width: 40%;
+  width: 20%;
   height: 40px;
   padding: 5px;
   margin: 10px auto;
@@ -950,6 +957,183 @@ display: flex;
 .Login_left_column button:hover{
     background-color: rgba(255, 197, 8, 0.367);
 }
+
+/*Register CSS*/
+.Register_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 70px;
+    background-color: rgba(187, 168, 134, 0.507);
+
+
+}
+.Register_within {
+    display: flex;
+    flex-direction: row;
+    /*outline: 2px solid red;*/
+    width: 100%;
+    height: 70vh;;
+    padding: 20px;
+    gap: none;
+    background-color: #ffffffce;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.Register_right {
+    flex:1;
+    /*outline: 2px solid rgb(0, 136, 255);*/
+}
+.Register_right_column{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.Register_right_img1{
+    position:absolute;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 90%;
+    z-index: 3;
+}
+.Register_right_img1 img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    clip-path: ellipse(95% 60% at 10% 15%);
+    box-shadow: inset 0 0 50px 20px rgba(255, 255, 255, 0.5);
+}
+.Register_right_img2{
+    position:absolute;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 91%;
+    opacity: .8;
+    z-index: 1;
+    box-shadow: inset 0 0 50px 20px rgba(255, 255, 255, 0.5);
+}
+.Register_right_img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    box-shadow: inset 0 0 50px 20px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+.Register_right_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    height: 66vh;
+    opacity: 1;
+    z-index: 5;
+    padding: 20px;
+    justify-content: flex-end;
+    line-height: 1.1;
+
+}
+.Register_right_text h1 {
+    font-size: 5em;
+    font-style: oblique;
+    color: rgb(255, 255, 253);
+}
+.Register_right_text p {
+    font-size: 1.5em;
+    font-style: oblique;
+    color: rgba(24, 24, 24, 0.959);
+}
+.Register_left {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*outline: 2px solid rgb(0, 30, 255);*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    flex-direction: column;
+}
+.Register_left_column {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    line-height: 40px;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.Register_leftcontents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    outline: 2px solid rgb(51, 255, 0);
+}
+.Register_left_column input {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  /*outline: 2px solid red;*/
+}
+
+.Register_left_column button {
+  width: 20%;
+  height: 40px;
+  padding: 5px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.Register_placeholder {
+    width: 73%;
+    flex-direction: column;       /* label and input side by side */
+    align-items: flex-start;       /* vertically align label and input */
+    justify-content: center;   /* center the whole block horizontally */
+    gap: 10px;                 /* spacing between label and input */
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.Register_placeholder p {
+    margin: 0;
+    font-weight: bold;
+    min-width: 80px;           /* optional: keeps label width consistent */
+    text-align: left;         /* aligns label text to the right */
+    padding-left: 10px;
+}
+.Register_placeholder input {
+    width: 93%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    margin: 0 auto;
+}
+
+
+.Register_left_column button:hover{
+    background-color: rgba(255, 197, 8, 0.367);
+}
+
 
 #Shop {
     display: flex;
@@ -1043,7 +1227,7 @@ display: flex;
     background-color: burlywood;
 }
 
-/*Checkout CSS*/
+/*------------------------------Checkout CSS--------------------*/
 .Checkout_container {
     display: flex;
     min-height: 100vh;
