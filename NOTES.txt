@@ -8,3 +8,9 @@ added bread images for the shop
 fixed the error and success message
 fixed the layout of checkout.php
 fixed the flow and logic when checking out (db is already connected) 
+
+DAY 7:
+added UI for login/register
+
+DAY 8:
+added necessary error-success msg

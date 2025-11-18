@@ -69,6 +69,37 @@ session_start();
             unset($_SESSION['login_error']);
         }
 
+        //logout msg
+        if (isset($_SESSION['logout_msg'])) {
+            echo '<div id="successMsg" class="toast-error"> ' . $_SESSION['logout_msg'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['logout_msg']);
+            
+
+            session_unset();
+            session_destroy();
+
+
+        }
+
+        //Contact form msg
+        if (isset($_SESSION['Contact_form'])) {
+            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['Contact_form'] . '
+            </div>
+
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['Contact_form']);
+        }
         ?>
          
     <!-- Navigation -->
@@ -239,23 +270,20 @@ Dito, hindi lang basta shop. It’s a tribute to our panaderos at panaderas — 
         <!--</div>-->
      </section>
 
-    <!---Form Section-->  
+    <!---Form Section 
     <section id = "form_section">
         <h1>hello</h1>
-        <!--once redirected again from Contact_process.php, will fire this message as pop up-->
-                <!-- this is called JS alert via PHP echo-->
-                <?php if (isset($_GET['contactprocess_success'])): ?>
-                    echo "<script>alert('Thanks for the message! every thoughts count')</script>"
-                <?php endif; ?>
-
-                <!--once filled, will make contact to contactprocess.php-->
+        once redirected again from Contact_process.php, will fire this message as pop up
+                this is called JS alert via PHP echo
+            
+                once filled, will make contact to contactprocess.php
                 <form action="handlers/Contact_process.php" method="POST">
                     <input type="text" name="name" placeholder="Your name" required/>
                     <input type="email" name="email" placeholder="Your email" required/>
                     <textarea name="message" placeholder="Your thoughts" required></textarea>
                     <button type="submit">Send</button>
                 </form>
-    </section>
+    </section>--> 
 
     <!-- Contact -->
     <section id = "Contact">
@@ -265,15 +293,28 @@ Dito, hindi lang basta shop. It’s a tribute to our panaderos at panaderas — 
         
         <div class="Contact_container">
             <div class = "Contact_left">
-                <h1>Contact</h1>
-                <p>UAH, Angeles City, Pampanga, Phillipines</p>
-                <p>0912-345-6789</p>
-                <p>KneadBread@gmail.com</p>
-                <p>MeljohnReyes-2025</p>
+                
+                <div class="Contact_column">
+                    <h1>Any Message for Us?</h1><!--once filled, will make contact to contactprocess.php-->
+                    <form action="handlers/Contact_process.php" method="POST" class="form_column">
+                        <!--<input type="text" name="name" placeholder="Your name" required/>-->
+                        <input type="email" name="email" placeholder="Your email" required/>
+                        <textarea name="message" placeholder="Your thoughts" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
             </div>
 
 
             <div class = "Contact_right">
+                <div class="Contact_column">
+                    <h1>Contact</h1>
+                    <p>UAH, Angeles City, Pampanga, Phillipines</p>
+                    <p>0912-345-6789</p>
+                    <p>KneadBread@gmail.com</p>
+                    <p>MeljohnReyes-2025</p>
+                </div>
+
                 <div class="Contact_column">
                     <h1>Explore</h1>
                         <a href="#hero">Home</a>

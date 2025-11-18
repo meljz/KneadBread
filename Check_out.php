@@ -36,7 +36,7 @@
         }
 
         if (isset($_SESSION['checkout_error'])) {       // checkout error
-            echo '<div id="successMsg" class="toast-success"> ' . $_SESSION['checkout_error'] . '
+            echo '<div id="successMsg" class="toast-error"> ' . $_SESSION['checkout_error'] . '
             </div>
 
             <script>
@@ -46,6 +46,8 @@
             </script>';
             unset($_SESSION['checkout_error']);
         }
+
+
     ?>
          <!-- Navigation -->
     <section class = "Check_out">

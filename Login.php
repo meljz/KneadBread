@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +16,17 @@
 
     </head>
     <body>
+        <?php if(isset($_SESSION['cartnouser_error'])) {
+            echo '<div id="successMsg" class="toast-error"> ' . $_SESSION['cartnouser_error'] . '
+            </div>
+            <script>
+                setTimeout(function() {
+                    document.getElementById("successMsg").style.display = "none";
+                }, 5000);
+            </script>';
+            unset($_SESSION['cartnouser_error']);
+        }?>
+
     <!-- NAVGIATION -->
     <div class = "nav_container">
         <div class = "burger_menu">
