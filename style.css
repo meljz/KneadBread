@@ -823,16 +823,16 @@ display: flex;
 }
 .Register_rightcontents {
     width: 80%;
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 auto;
-   
+    align-content: center;
 }
+
 .Register_right_column input {
   width: 40%;
   height: 40px;
@@ -986,15 +986,11 @@ display: flex;
   font-size: 1em;
 }
 
-.Login_left_column button {
-  width: 20%;
-  height: 40px;
-  padding: 5px;
-  margin: 10px auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1em;
+
+.btn_submit{
+    font-size: 1rem
 }
+
 
 .Login_left_column button:hover{
     background-color: rgba(255, 197, 8, 0.367);
@@ -1094,19 +1090,20 @@ display: flex;
     color: rgba(24, 24, 24, 0.959);
 }
 .Register_left {
-    flex:1;
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    /*outline: 2px solid rgb(0, 30, 255);*/
+    /* outline: 2px solid rgb(0, 30, 255); */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     flex-direction: column;
+    align-content: center;
 }
 .Register_left_column {
     width: 80%;
-    height: 80%;
+    height: auto;
     display: flex;
-    padding: 30px 0;
+    padding: 20px;
     flex-direction: column;
     line-height: 40px;
     /*outline: 2px solid lightblue;*/
@@ -1375,13 +1372,55 @@ display: flex;
 }
 
 
-@media (max-width: 1200px)  { /*laptop view*/
+@media (max-width: 1200px)  { /*laptop view 1200    */
+
+
+.nav_links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+
+}
+.status {
+
+    display: flex;
+}
+.status p {
+    font-size: 2em;
+    color: rgb(255 226 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.nav_links li {
+    margin: 0 20px;
+    padding: 10px 20px;
+    height: 50px;
+}
+.nav_links li:hover {
+    background-color: rgba(247, 188, 115, 0.089);
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+}
+
+
+.nav_links li a {
+    font-weight: bold;
+    font-size: .9em;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 .Login_left {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-     outline: 2px solid rgb(0, 30, 255); 
+    /* outline: 2px solid rgb(0, 30, 255); */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     flex-direction: column;
     } 
@@ -1392,7 +1431,7 @@ display: flex;
     padding: 30px 0;
     flex-direction: column;
     /*line-height: 40px;*/
-    outline: 2px solid lightblue;
+    /*outline: 2px solid lightblue;*/
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
     .Login_leftcontents {
@@ -1404,34 +1443,45 @@ display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-evenly;
-    outline: 2px solid red;
+    /*outline: 2px solid red;*/
     }
+    .Login_right_text h1 {
+    font-size: 3em;
+    font-style: oblique;
+    color: rgb(255, 255, 255);
+}
+.Login_right_text p {
+    font-size: 1.1em;
+    font-style: oblique;
+    color: rgba(252, 252, 252, 0.959);
+}
 
     .Register_placeholder {
-    width: 60%;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: none;
+    gap: 20px;
+    padding: 5px;
     margin-bottom: 3px;
     display: flex;
-    outline: 2px solid green;
+    /*outline: 2px solid green;*/
 }
 .Register_placeholder p {
     margin: 0;
     font-weight: bold;
-    min-width: 80px;
-    height: 15%;
+    width: 80%;
+    height: 20%;
     text-align: left;
     padding-left: 10px;
-    outline: 2px solid salmon;
+    /*outline: 2px solid salmon;*/
 }
 
 .Login_left_column button {
     width: 20%;
     height: 40px;
     padding: 0 5px;
-    border: 1px solid #ff0606;
+    /*border: 1px solid #ff0606;*/
     border-radius: 8px;
     font-size: 1em;
 }
@@ -1444,10 +1494,273 @@ display: flex;
     font-size: 1em;
     margin: 0 auto;
 }
+.Register_rightcontents {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.Register_left_column {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    line-height: 40px;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.Register_left_column button {
+    width: 40%;
+    height: auto;
+    padding: 5px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+.Register_right_text h1 {
+    font-size: 3em;
+    font-style: oblique;
+    color: rgb(255, 255, 253);
+}
+.Register_right_text p {
+    font-size: 1.2em;
+    font-style: oblique;
+    color: rgba(24, 24, 24, 0.959);
+}       
 }
 
 
-@media (max-width: 1100px)  /* Tablet Landscape */{ 
+@media (max-width: 900px)  /* Tablet Landscape */{  
+    .Register_right {
+    flex: 1;
+    display: none;
+    /* outline: 2px solid rgb(0, 136, 255); */
+}
+.Register_within {
+    display: flex;
+    flex-direction: row;
+    /* outline: 2px solid red; */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: none;
+    background-color: #ffffffce;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Register_left_column {
+        width: 80%;
+        height: auto;
+        display: flex;
+        padding: 30px 0;
+        flex-direction: column;
+        line-height: 40px;
+        /*outline: 2px solid lightblue;*/
+        margin: 10px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+        .Register_right_text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+        height: 66vh;
+        opacity: 1;
+        z-index: 5;
+        padding: 20px;
+        justify-content: flex-end;
+    }
+        .Register_right_img2 {
+        position: absolute;
+        object-fit: cover;
+        display: none;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        z-index: 1;
+    }
+        .Register_right_column {
+        position: absolute;
+        display: none;
+        width: 85%;
+        /* height: auto; */
+        bottom: 20px;
+        right: 60px;
+        /* width: 60%; */
+        opacity: 0.2;
+        z-index: 0;
+        height: auto;
+        max-height: 80vh;
+    }
+
+    .Register_rightcontents h1 {
+        font-size: 2rem;
+    }
+    .Register_rightcontents p {
+        font-size: 1rem;
+    }
+
+    .Login_leftcontents h1 {
+        font-size: 2rem;
+    }
+    .Login_leftcontents p {
+        font-size: 1rem;
+    }
+
+    .Login_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: rgba(187, 168, 134, 0.507);
+}
+    .Login_within {
+    position: relative;
+    display: flex;
+    flex-direction: column  ;
+    /* outline: 2px solid red; */
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: none;
+    background-color: #ffffffce;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Login_right_column {
+        position: absolute;
+        display: none;
+        width: 85%;
+        /* height: auto; */
+        bottom: 20px;
+        right: 60px;
+        /* width: 60%; */
+        opacity: 0.2;
+        z-index: 0;
+        height: auto;
+        max-height: 80vh;
+}
+.Login_right {
+    flex:1;
+    /*outline: 2px solid rgb(0, 136, 255);*/
+}
+
+.Login_right_img1{
+    position:absolute;
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 2;
+}
+.Login_right_img1 img {
+        position: absolute;
+        bottom: -10px;
+        right: 2rem;
+        /* width: 60%; */
+        opacity: 0.6;
+        z-index: 0;
+        height: auto;
+        max-height: 80vh;
+        width: 95%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        clip-path: ellipse(95% 60% at 10% 15%);
+}
+    .Login_right_img2 {
+        position: absolute;
+        object-fit: cover;
+        display: none;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        z-index: 1;
+    }
+.Login_right_img2 img {
+    display: none;
+}
+.Login_right_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    height: 66vh;
+    opacity: 1;
+    z-index: 5;
+    padding: 20px;
+    justify-content: flex-end;
+}
+.Login_right_text h1 {
+    display: none;
+}
+.Login_right_text p {
+    display: none;
+}
+.Login_left {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*outline: 2px solid rgb(0, 30, 255);*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    flex-direction: column;
+}
+.Login_left_column {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    line-height: 40px;
+    /*outline: 2px solid lightblue;*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.Login_leftcontents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /*align-content: center;*/
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 4;
+}
+.Login_left_column input {
+  width: 90%;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.Login_left_column button {
+  width: 20%;
+  height: 40px;
+  padding: 5px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.Login_left_column button:hover{
+    background-color: rgba(255, 197, 8, 0.367);
+}
+
     .Hero_text h1 {
     font-size: 3.8em;
     color: #faf7f3;
@@ -1627,6 +1940,24 @@ display: flex;
 }
  }
 @media (max-width: 800px)  /* Tablet Portrait */{ 
+    .Register_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: rgba(187, 168, 134, 0.507);
+}
+.Login_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: rgba(187, 168, 134, 0.507);
+}
     .nav_links li {
         margin: 0 5px;
         padding: 10px 10px;
@@ -1884,6 +2215,30 @@ display: flex;
 
 }
 @media (max-width: 600px) /* Large Mobile  */ {
+    .Register_rightcontents h1 {
+        font-size: 1rem;
+    }
+    .Register_rightcontents p {
+        font-size: .9rem;
+    }
+       .Login_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(187, 168, 134, 0.507);
+}
+.Login_left_column button {
+  width: 40%;
+  height: auto;
+  padding: 5px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
     #Hero {
         height: auto
     }
@@ -2128,6 +2483,25 @@ display: flex;
 
 }
 @media (max-width: 450px) /* Small Mobile  */ {
+    .Register_container {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: rgba(187, 168, 134, 0.507);
+}
+
+    .Login_left_column button {
+        width: auto;
+        height: auto;
+        padding: 5px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1em;
+    }
     
     .hero_bread {
         clip-path: ellipse(95% 100% at 10% 0%);
@@ -2321,7 +2695,7 @@ display: flex;
     }
 }
 
-@media (max-width: 700px) /* Nav Burger  */ {
+@media (max-width: 1000px) /* Solely for nav burger and nav */ {
     .nav_links {
          display: none;
          flex-direction: column;

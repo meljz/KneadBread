@@ -6,6 +6,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
         <title>Login</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
@@ -39,7 +40,7 @@
                 <li><a href="index.php#Hero">Home</a></li>
                 <li><a href="index.php#Products">Shop</a></li>
                 <li><a href="index.php#Recipe">Recipes</a></li>
-                <li><a href="index.php#Story"> About Us</a></li>
+                <li><a href="index.php#Story"> About</a></li>
                 <li><a href="index.php#Contact"> Contact</a></li>
                 <li><a href="Login.php"> login</a></li>
                 <li><a href="Register.php"> Register</a></li>
@@ -65,7 +66,7 @@
                         </div>
                         
                         
-                        <button type="submit" name="login">Submit</button>
+                        <button type="submit" name="login" class="btn_submit">Submit</button>
                     </form>
                 </div> 
             </div>
@@ -88,5 +89,6 @@
          </div>
     </div>  
 
+        <script src="script.js"></script>
     </body> 
 </html>
