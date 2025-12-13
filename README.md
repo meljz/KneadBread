@@ -1,8 +1,8 @@
 # KneadBread - Filipino Panaderia Website
 
 ## 👨‍💻 Developer
-**Meljohn Reyes - 2025**  
-Personal Project
+**Meljohn Jay A. Reyes - 2025**  
+A Personal Project
 
 ---
 
@@ -12,10 +12,10 @@ KneadBread is a personal project born from my love for breadmaking and my aspira
 ---
 
 ## 🛠️ Technologies Used
+- **PHP** - Session-based authentication and server-side processing
 - **HTML5** - Semantic markup
 - **CSS3** - Styling and animations
 - **JavaScript** - Interactive features
-- **PHP** - Session-based authentication and server-side processing
 - **MySQL** - Database management
 
 ---
@@ -54,7 +54,7 @@ KneadBread/
 ### Installation Steps
 
 1. **Install XAMPP**
-   - Download and install XAMPP from [https://www.apachefriends.org](https://www.apachefriends.org)
+   - Download and install XAMPP 
 
 2. **Clone/Copy Project**
    ```bash
@@ -80,14 +80,9 @@ KneadBread/
 
 5. **Run the Website**
 
-   **Option 1: Using XAMPP**
-   ```
-   http://localhost/KneadBread/index.php
-   ```
-
-   **Option 2: Using PHP Built-in Server**
-   ```bash
-   # Navigate to project directory
+ *In XAMPP (start apache and mysql)
+ 
+ *# Navigate to project directory
    cd C:\xampp\htdocs\KneadBread
 
    # Start PHP server
@@ -95,7 +90,6 @@ KneadBread/
 
    # Access in browser
    http://localhost:8000
-   ```
 
 ---
 
@@ -106,8 +100,4 @@ KneadBread/
 - **Responsive Design** - Mobile-friendly interface
 - **SEO Optimized** - Meta tags and semantic HTML
 
----
 
-## 📧 Contact
-**Email:** KneadBread@gmail.com  
-**Location:** Angeles City, Pampanga, Philippines
