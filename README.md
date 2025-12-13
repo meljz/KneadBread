@@ -7,7 +7,7 @@ A Personal Project
 ---
 
 ## 🍞 About
-KneadBread is a personal project born from my love for breadmaking and my aspiration to become a pastry chef. This website celebrates Filipino bread culture with the objective to uplift Filipino breads not just in the local market but internationally. It showcases traditional panaderia products and connects people with authentic Pinoy baked goods.
+KneadBread is a personal project with monolithic structure and the idea to create this website was from my love and curiosity for breadmaking and my aspiration to become a pastry chef. This website celebrates Filipino bread culture with the objective to uplift Filipino breads not just in the local market but internationally. It showcases traditional panaderia products and connects people with authentic Pinoy baked goods.
 
 ---
 
