@@ -94,15 +94,15 @@ KneadBread/
 
 5. **Run the Website**
 
- *In XAMPP (start apache and mysql)
+ -In XAMPP (start apache and mysql)
  
- *# Navigate to project directory
+ -Navigate to project directory: 
    cd C:\xampp\htdocs\KneadBread
 
-   # Start PHP server
+  -Start PHP server: 
    php -S localhost:8000
-
-   # Access in browser
+   
+ -Access in browser: 
    http://localhost:8000
 
 ---
