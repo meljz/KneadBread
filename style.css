@@ -201,6 +201,29 @@ body{
      transition-delay: 0.1s;
 
 }
+.hero_button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+.hero_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+    border-color: #D2691E;
+}
 
 
 /*global for section*/
