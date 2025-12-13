@@ -11,6 +11,20 @@ KneadBread is a personal project born from my love for breadmaking and my aspira
 
 ---
 
+## 🌐 Live Demo
+This is the hosted site:  
+[http://kneadbread.infinityfreeapp.com/](http://kneadbread.infinityfreeapp.com/)
+
+ ⚠️ Browser Warning Notice
+When visiting the live demo site, some browsers (like Chrome) may show a **"Dangerous site"** warning.  
+This happens because free hosting domains (like InfinityFree) are sometimes flagged in bulk, even if the site itself is safe.
+
+To proceed:
+1. Click **"Hide details"** in the warning box.
+2. Then click **"Only visit this unsafe site if you're sure you understand the risks."**
+
+👉 Rest assured: this project is a student portfolio demo and contains **no malware, phishing, or harmful content**.
+
 ## 🛠️ Technologies Used
 - **PHP** - Session-based authentication and server-side processing
 - **HTML5** - Semantic markup
